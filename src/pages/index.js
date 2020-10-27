@@ -54,7 +54,7 @@ export default () => (
 									</p>
 								</div>
 								<div className='Product__price_wrapper'>
-									<button
+									<span
 										className='Product__add-item snipcart-add-item'
 										data-item-id={product.id}
 										data-item-price={product.price}
@@ -63,10 +63,10 @@ export default () => (
 										data-item-description={
 											product.description
 										}
-										data-item-url={`https://silly-stonebraker-09e691.netlify.app/`}
+										data-item-url={`/`}
 									>
 										Add to cart
-									</button>
+									</span>
 									<span className='Product__buy'>
 										Buy now
 									</span>
