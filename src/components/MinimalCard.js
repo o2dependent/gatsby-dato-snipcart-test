@@ -1,12 +1,15 @@
 import React from 'react';
+import Img from 'gatsby-image';
 
 export default function MinimalCard({ product }) {
 	return (
 		<div class='card'>
-			<div class='img'></div>
+			<div class='card__image-container'>
+				<Img sizes={product.image.sizes} />
+			</div>
 			<div class='content'>
-				<h2 class='title'>Product Title</h2>
-				<p class='description'>A short description of the product.</p>
+				<h2 class='title'>{product.names}</h2>
+				<p class='description'>{product.description}</p>
 				<div class='button-grid'>
 					<span
 						class='snipcart-add-item'
