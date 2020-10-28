@@ -1,4 +1,23 @@
+// Colors
+$bg-color: #fefefe;
+$dot-color: #8759b4;
+
+// Dimensions
+$dot-size: 1px;
+$dot-space: 22px;
+
 .Container {
-  width: 100%;
-  overflow: hidden;
+	width: 100%;
+	overflow: hidden;
+	background-color: #f5ebff;
+	background: linear-gradient(
+				90deg,
+				$bg-color ($dot-space - $dot-size),
+				transparent 1%
+			)
+			center,
+		linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%)
+			center,
+		$dot-color;
+	background-size: $dot-space $dot-space;
 }

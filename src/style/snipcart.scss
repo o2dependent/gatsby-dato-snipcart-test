@@ -1,6 +1,6 @@
 .snip-layout.snip-layout {
 	* {
-		font-family: 'Raleway', sans-serif;
+		font-family: 'Comfortaa', cursive;
 	}
 
 	.snip-product__name {
@@ -8,15 +8,15 @@
 	}
 
 	.snip-header {
-		background: #663399;
+		background: orange;
 	}
 
 	.snip-layout__main-container {
-		border: 2px solid black;
-		padding: 3px;
+		border-radius: 10px;
+		overflow: hidden;
 	}
 
 	.snip-header__total {
-		border-radius: 0;
+		border-radius: 5px;
 	}
 }

@@ -1,5 +1,8 @@
 .Catalogue {
 	margin: 5rem 0;
+	@media screen and (max-width: 900px) {
+		margin: 0;
+	}
 }
 
 .Catalogue__item {
@@ -21,7 +24,7 @@
 @media screen and (min-width: 900px) {
 	.Catalogue {
 		display: flex;
-		columns: 3;
+		columns: 4;
 		flex-wrap: wrap;
 	}
 

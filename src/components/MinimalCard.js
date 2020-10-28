@@ -8,8 +8,9 @@ export default function MinimalCard({ product }) {
 				<Img sizes={product.image.sizes} />
 			</div>
 			<div class='content'>
-				<h2 class='title'>{product.names}</h2>
+				<h2 class='title'>{product.name}</h2>
 				<p class='description'>{product.description}</p>
+				<p class='price'>${product.price}</p>
 				<div class='button-grid'>
 					<span
 						class='snipcart-add-item'
@@ -21,17 +22,6 @@ export default function MinimalCard({ product }) {
 						data-item-url={`/`}
 					>
 						Add to cart
-					</span>
-					<span
-						class='snipcart-add-item snipcart-checkout'
-						data-item-id={product.id}
-						data-item-price={product.price}
-						data-item-image={product.image.url}
-						data-item-name={product.name}
-						data-item-description={product.description}
-						data-item-url={`/`}
-					>
-						Buy Now
 					</span>
 				</div>
 			</div>
