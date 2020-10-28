@@ -8,9 +8,8 @@
 
 @media screen and (min-width: 600px) {
 	.Catalogue {
-		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
 	}
 
 	.Catalogue__item {
@@ -20,9 +19,10 @@
 
 @media screen and (min-width: 900px) {
 	.Catalogue {
-		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 50px;
+		width: 100%;
 	}
 
 	.Catalogue__item {
