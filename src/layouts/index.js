@@ -11,7 +11,7 @@ const Layout = ({ children, site }) => {
 
 	useEffect(() => {
 		window.addEventListener('scroll', (e) => {
-			if (window.scrollY >= 50 && !titleVisible) {
+			if (window.scrollY >= 100 && !titleVisible) {
 				setTitleVisible(true);
 			} else if (window.scrollY <= 5 && titleVisible) {
 				setTitleVisible(false);
