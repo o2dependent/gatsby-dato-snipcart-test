@@ -1,6 +1,9 @@
 .Header {
 	background: #e44663;
 	color: white;
+	position: sticky;
+	top: 0;
+	z-index: 9999;
 }
 
 .Header__body {

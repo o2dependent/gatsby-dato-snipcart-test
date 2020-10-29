@@ -1,0 +1,17 @@
+.Toast {
+	box-sizing: content-box;
+	position: fixed;
+	bottom: 50px;
+	left: 50px;
+	background: #e44663;
+	color: #fefefe;
+	border-radius: 10px;
+	padding: 15px;
+	transition: opacity 500ms;
+	z-index: 9999;
+
+	@media screen and (max-width: 900px) {
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}

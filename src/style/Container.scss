@@ -8,7 +8,7 @@ $dot-space: 22px;
 
 .Container {
 	width: 100%;
-	overflow: hidden;
+	min-height: 100vh;
 	background-color: #f5ebff;
 	background: linear-gradient(
 				90deg,

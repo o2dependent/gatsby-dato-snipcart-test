@@ -1,23 +1,20 @@
 import React from 'react';
 import Img from 'gatsby-image';
 
-export default function Card({ product }) {
+export default function Card({ product, openToast }) {
 	return (
-		<div className='Catalogue__item' key={product.id}>
-			<div className='Product'>
-				<div className='Product__image'>
-					<Img sizes={product.image.sizes} />
-				</div>
-				<div className='Product__details'>
-					<h2 className='Product__name'>{product.name}</h2>
-					<p className='Product__description'>
-						{product.description}
-					</p>
-					<p className='Product__price'>${product.price}</p>
-				</div>
-				<div className='Product__price_wrapper'>
+		<div className='card'>
+			<div className='card__image-container'>
+				<Img sizes={product.image.sizes} />
+			</div>
+			<div className='content'>
+				<h2 className='title'>{product.name}</h2>
+				<p className='description'>{product.description}</p>
+				<p className='price'>${product.price}</p>
+				<div className='button-grid'>
 					<span
-						className='Product__add-item snipcart-add-item'
+						className='snipcart-add-item'
+						onClick={openToast}
 						data-item-id={product.id}
 						data-item-price={product.price}
 						data-item-image={product.image.url}
@@ -27,7 +24,6 @@ export default function Card({ product }) {
 					>
 						Add to cart
 					</span>
-					<span className='Product__buy'>Buy now</span>
 				</div>
 			</div>
 		</div>
