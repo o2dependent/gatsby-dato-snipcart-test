@@ -13,7 +13,7 @@ const Layout = ({ children, site }) => {
 		window.addEventListener('scroll', (e) => {
 			if (window.scrollY >= 50 && !titleVisible) {
 				setTitleVisible(true);
-			} else if (window.scrollY <= 0 && titleVisible) {
+			} else if (window.scrollY <= 5 && titleVisible) {
 				setTitleVisible(false);
 			}
 		});
