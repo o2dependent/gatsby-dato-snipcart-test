@@ -9,7 +9,7 @@
 .Header__body {
 	display: flex;
 	align-items: center;
-	@media screen and (max-width: 900px) {
+	@media screen and (max-width: 600px) {
 		flex-direction: column;
 	}
 }
@@ -22,8 +22,10 @@
 }
 
 .Header__title {
+	overflow: hidden;
 	padding: 20px 0;
-	@media screen and (max-width: 900px) {
+
+	@media screen and (max-width: 600px) {
 		padding: 5px 0;
 	}
 	a {
@@ -36,6 +38,16 @@
 		display: block;
 		padding: 2px;
 	}
+	@media screen and (max-width: 600px) {
+		transition: height 300ms, opacity 300ms;
+		height: 50px;
+		opacity: 1;
+
+		&.Header__title-visible {
+			height: 0;
+			opacity: 0;
+		}
+	}
 }
 .Header__links {
 	flex-grow: 1;
@@ -43,7 +55,8 @@
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	@media screen and (max-width: 900px) {
+	padding: 10px 0;
+	@media screen and (max-width: 600px) {
 		width: 300px;
 	}
 }
@@ -51,7 +64,7 @@
 	margin-left: 30px;
 	margin-right: auto;
 	cursor: pointer;
-	@media screen and (max-width: 900px) {
+	@media screen and (max-width: 600px) {
 		margin: 0;
 	}
 }

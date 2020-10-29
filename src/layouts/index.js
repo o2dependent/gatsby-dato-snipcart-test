@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
@@ -7,6 +7,17 @@ import '../style/index.scss';
 
 const Layout = ({ children, site }) => {
 	const [aboutOpen, setAboutOpen] = useState(false);
+	const [titleVisible, setTitleVisible] = useState(true);
+
+	useEffect(() => {
+		window.addEventListener('scroll', (e) => {
+			if (window.scrollY >= 50 && !titleVisible) {
+				setTitleVisible(true);
+			} else if (window.scrollY <= 0 && titleVisible) {
+				setTitleVisible(false);
+			}
+		});
+	});
 
 	return (
 		<div>
@@ -15,7 +26,11 @@ const Layout = ({ children, site }) => {
 				<div className='Header'>
 					<div className='Wrap'>
 						<div className='Header__body'>
-							<h1 className='Header__title'>
+							<h1
+								className={`Header__title ${
+									titleVisible ? 'Header__title-visible' : ''
+								}`}
+							>
 								<Link to='/'>{site.siteMetadata.siteName}</Link>
 							</h1>
 							<div className='Header__links'>
