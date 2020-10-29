@@ -1,11 +1,14 @@
+@import 'variables';
+@import 'mixins';
+
 .Toast {
 	box-sizing: content-box;
 	position: fixed;
 	bottom: 50px;
 	left: 50px;
-	background: #e44663;
-	color: #fefefe;
-	border-radius: 10px;
+	background: $mainColor;
+	color: $mainWhite;
+	@include border-radius();
 	padding: 15px;
 	transition: opacity 500ms;
 	z-index: 9999;

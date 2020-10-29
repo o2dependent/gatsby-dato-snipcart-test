@@ -1,6 +1,8 @@
-// Colors
-$bg-color: #fefefe;
-$dot-color: #8759b4;
+@import 'variables';
+@use 'sass:color';
+
+$dot-color: darken(complement($mainColor), 40%);
+// $dot-color: #8759b4;
 
 // Dimensions
 $dot-size: 1px;
@@ -9,14 +11,14 @@ $dot-space: 22px;
 .Container {
 	width: 100%;
 	min-height: 100vh;
-	background-color: #f5ebff;
+	background-color: $mainWhite;
 	background: linear-gradient(
 				90deg,
-				$bg-color ($dot-space - $dot-size),
+				$mainWhite ($dot-space - $dot-size),
 				transparent 1%
 			)
 			center,
-		linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%)
+		linear-gradient($mainWhite ($dot-space - $dot-size), transparent 1%)
 			center,
 		$dot-color;
 	background-size: $dot-space $dot-space;

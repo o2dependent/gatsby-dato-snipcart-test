@@ -1,3 +1,9 @@
+@mixin flex-columns($cols) {
+	display: flex;
+	columns: $cols;
+	flex-wrap: wrap;
+}
+
 .Catalogue {
 	@media screen and (max-width: 600px) {
 		margin: 0;
@@ -10,24 +16,12 @@
 
 @media screen and (min-width: 600px) {
 	.Catalogue {
-		display: flex;
-		columns: 2;
-		flex-wrap: wrap;
-	}
-
-	.Catalogue__item {
-		width: 45%;
+		@include flex-columns(2);
 	}
 }
 
 @media screen and (min-width: 900px) {
 	.Catalogue {
-		display: flex;
-		columns: 4;
-		flex-wrap: wrap;
-	}
-
-	.Catalogue__item {
-		width: 28%;
+		@include flex-columns(4);
 	}
 }

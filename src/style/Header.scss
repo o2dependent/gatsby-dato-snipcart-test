@@ -1,6 +1,8 @@
+@import 'variables';
+
 .Header {
-	background: #e44663;
-	color: white;
+	background: $mainColor;
+	color: $mainWhite;
 	position: sticky;
 	top: 0;
 	z-index: 9999;
@@ -33,7 +35,7 @@
 		font-size: 2em;
 		font-weight: bold;
 		position: relative;
-		color: white;
+		color: $mainWhite;
 		text-decoration: none;
 		display: block;
 		padding: 2px;
@@ -75,8 +77,8 @@
 	.snipcart-total-items {
 		font-weight: bold;
 		font-size: 12px;
-		color: #e44663;
-		background: #fefefe;
+		color: $mainColor;
+		background: $mainWhite;
 		width: fit-content;
 		min-height: 18px;
 		min-width: 18px;
@@ -90,7 +92,7 @@
 
 .Header__summary {
 	text-decoration: none;
-	color: white;
+	color: $mainWhite;
 	text-align: center;
 	cursor: pointer;
 

@@ -5,7 +5,10 @@ export default function Card({ product, openToast }) {
 	return (
 		<div className='card'>
 			<div className='card__image-container'>
-				<Img sizes={product.image.sizes} />
+				<Img
+					sizes={product.image.sizes}
+					alt={`Product with a name of ${product.name}`}
+				/>
 			</div>
 			<div className='content'>
 				<h2 className='title'>{product.name}</h2>
