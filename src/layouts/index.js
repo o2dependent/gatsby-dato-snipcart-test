@@ -7,7 +7,7 @@ import '../style/index.scss';
 
 const Layout = ({ children, site }) => {
 	const [aboutOpen, setAboutOpen] = useState(false);
-	const [titleVisible, setTitleVisible] = useState(true);
+	const [titleVisible, setTitleVisible] = useState(false);
 
 	useEffect(() => {
 		const isClient = typeof window != 'undefined';
