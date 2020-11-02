@@ -20,6 +20,9 @@
 			box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
 			@include border-radius();
 			overflow: hidden;
+			@include mobile {
+				@include border-radius(0);
+			}
 		}
 
 		.snip-header__total {

@@ -1,3 +1,5 @@
+@import 'mixins';
+
 @mixin flex-columns($cols) {
 	display: flex;
 	columns: $cols;
@@ -14,14 +16,6 @@
 	margin-bottom: 60px;
 }
 
-@media screen and (min-width: 600px) {
-	.Catalogue {
-		@include flex-columns(2);
-	}
-}
-
-@media screen and (min-width: 900px) {
-	.Catalogue {
-		@include flex-columns(4);
-	}
+.Catalogue {
+	@include flex-columns(3);
 }

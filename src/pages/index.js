@@ -22,6 +22,15 @@ const DATO_QUERY = graphql`
 				}
 			}
 		}
+		about: datoCmsAboutContent {
+			aboutDescription
+			profileImage {
+				url
+				sizes(maxWidth: 300, imgixParams: { fm: "jpg" }) {
+					...GatsbyDatoCmsSizes
+				}
+			}
+		}
 		site {
 			siteMetadata {
 				siteName
@@ -47,7 +56,7 @@ export default () => {
 		<StaticQuery
 			query={DATO_QUERY}
 			render={(data) => (
-				<Layout site={data.site}>
+				<Layout about={data.about} site={data.site}>
 					<Toast toastOpen={toastOpen} toastData={toastData} />
 					<div className='Catalogue'>
 						{data.products.edges.map(({ node: product }) => (

@@ -1,3 +1,11 @@
+@import 'variables';
+
+@mixin mobile {
+	@media screen and (max-width: $mobileBreak) {
+		@content;
+	}
+}
+
 @mixin border-radius($scale: 1) {
 	border-radius: 10px * $scale;
 }

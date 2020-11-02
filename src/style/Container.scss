@@ -18,8 +18,7 @@ $dot-space: 22px;
 				transparent 1%
 			)
 			center,
-		linear-gradient($mainWhite ($dot-space - $dot-size), transparent 1%)
-			center,
+		linear-gradient($mainWhite ($dot-space - $dot-size), transparent 1%) center,
 		$dot-color;
 	background-size: $dot-space $dot-space;
 }

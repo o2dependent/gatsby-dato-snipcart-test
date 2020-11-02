@@ -2,7 +2,7 @@ require('dotenv').config();
 
 module.exports = {
 	siteMetadata: {
-		siteName: `Anaka Olsen`,
+		siteName: process.env.SITE_NAME,
 	},
 	plugins: [
 		'gatsby-plugin-sass',

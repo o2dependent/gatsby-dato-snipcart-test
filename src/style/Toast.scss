@@ -13,7 +13,7 @@
 	transition: opacity 500ms;
 	z-index: 9999;
 
-	@media screen and (max-width: 900px) {
+	@include mobile {
 		left: 50%;
 		transform: translateX(-50%);
 	}

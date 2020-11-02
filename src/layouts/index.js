@@ -5,7 +5,7 @@ import Link from 'gatsby-link';
 
 import '../style/index.scss';
 
-const Layout = ({ children, site }) => {
+const Layout = ({ children, site, about }) => {
 	const [aboutOpen, setAboutOpen] = useState(false);
 	const [titleVisible, setTitleVisible] = useState(false);
 
@@ -74,12 +74,10 @@ const Layout = ({ children, site }) => {
 							className='Header__about-container'
 							style={{
 								height: aboutOpen ? null : 0,
+								paddingBottom: aboutOpen ? null : 0,
 							}}
 						>
-							<p>
-								I am a person and I do thing. I do thing well.
-								Buy my thing.
-							</p>
+							<p>{about.aboutDescription}</p>
 						</div>
 					</div>
 				</div>
