@@ -1,5 +1,6 @@
 import React from 'react';
 import Img from 'gatsby-image';
+import { Link } from 'gatsby';
 
 export default function Card({ product, openToast }) {
 	return (
@@ -15,6 +16,7 @@ export default function Card({ product, openToast }) {
 				<p className='description'>{product.description}</p>
 				<p className='price'>${product.price}</p>
 				<div className='button-grid'>
+					<Link to={`/${product.name}`}>See more</Link>
 					<span
 						className='snipcart-add-item'
 						onClick={openToast}

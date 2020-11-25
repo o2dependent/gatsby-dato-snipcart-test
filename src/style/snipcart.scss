@@ -1,9 +1,12 @@
 @import 'mixins';
 @import 'variables';
+@use "sass:color";
 
-.snip-layout {
-	&.snip-active {
-		z-index: 9999;
+$gradient: linear-gradient(90deg, darken($mainColor, 10%), $mainColor);
+
+.snipcart-modal__container {
+	z-index: 9999;
+	.snipcart-layout {
 		* {
 			font-family: 'Comfortaa', cursive;
 		}
@@ -12,29 +15,21 @@
 			text-transform: none;
 		}
 
-		.snip-header {
-			background: $mainColor;
-		}
-
-		.snip-layout__main-container {
-			box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
-			@include border-radius();
-			overflow: hidden;
-			@include mobile {
-				@include border-radius(0);
-			}
+		.snipcart-item-line {
+			box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
 		}
 
 		.snip-header__total {
 			@include border-radius(0.5);
 		}
 
-		.snip-btn {
-			background: $mainColor;
+		.snipcart__box--badge-highlight {
+			background: linear-gradient(90deg, darken($mainColor, 5%), $mainColor);
+		}
+
+		.snipcart-cart-button {
+			background: $gradient;
 			color: $mainWhite;
-			&:hover {
-				background: darken($mainColor, 10%);
-			}
 		}
 	}
 }

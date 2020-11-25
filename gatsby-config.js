@@ -12,10 +12,13 @@ module.exports = {
 			options: { apiToken: process.env.DATO_API_TOKEN },
 		},
 		{
-			resolve: 'gatsby-plugin-snipcart',
+			resolve: `gatsby-plugin-snipcart-advanced`,
 			options: {
-				apiKey: process.env.SNIPCART_API_KEY,
-				autopop: false,
+				version: '3.0.15',
+				publicApiKey: process.env.SNIPCART_API_KEY, // use public api key here or in environment variable
+				defaultLang: 'en',
+				currency: 'usd',
+				openCartOnAdd: false,
 			},
 		},
 	],
